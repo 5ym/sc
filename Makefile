@@ -1,4 +1,4 @@
-PROGRAM = libpcsclite.so.1.0.0
+PROGRAM = libpcsclite.so
 SRCS = winscard.cpp Crypto.cpp  Decoder-ECM.cpp  Keys.cpp  Keyset.cpp
 OBJS = $(subst .cpp,.o,$(SRCS))
 
