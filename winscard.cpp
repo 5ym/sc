@@ -93,9 +93,9 @@ LONG SCardFreeMemory(SCARDCONTEXT,LPCVOID){return SCARD_S_SUCCESS;}
 
 LONG SCardReleaseContext(SCARDCONTEXT){return SCARD_S_SUCCESS;}
 
-LONG SCardGetStatusChange(SCARDCONTEXT hContext, DWORD dwTimeout,LPSCARD_READERSTATE_A rgReaderStates, DWORD cReaders){return SCARD_S_SUCCESS; }
+LONG SCardGetStatusChange(SCARDCONTEXT hContext, DWORD dwTimeout,LPSCARD_READERSTATE rgReaderStates, DWORD cReaders){return SCARD_S_SUCCESS; }
 
 SCARD_IO_REQUEST g_rgSCardT1Pci_;
-SCARD_IO_REQUEST g_rgSCardT1Pci;
+const SCARD_IO_REQUEST g_rgSCardT1Pci = { SCARD_PROTOCOL_T1, sizeof(SCARD_IO_REQUEST) };
 
 }
